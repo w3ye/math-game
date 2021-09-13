@@ -13,15 +13,13 @@ class Round
     puts "#{self.player.name}: #{question.generate_question}"
     print "> "
     player_answer = gets.chomp.to_i
-    
-    if player_answer == question.answer
-      return true
-    end
+    return true if player_answer == question.answer
 
-    return false
+    false
   end
 
   def determine_win(answer)
     player.player_lose unless answer
   end
+
 end
