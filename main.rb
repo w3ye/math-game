@@ -14,9 +14,7 @@ while p1.health > 0 && p2.health > 0
     flag = !flag
   end
   puts "P1: #{p1.health}/3 vs P2: #{p2.health}/3"
-  if p1.health > 0 && p2.health > 0
-    puts "----- NEW TURN -----"
-  end
+  puts "----- NEW TURN -----" if p1.health > 0 && p2.health > 0
 end
 
 if p1.health == 0
